@@ -1,0 +1,10 @@
+<CollectionView ItemsSource="{Binding BoughtProducts}">
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Label Text="{Binding Client.Name}" />
+                <Label Text="{Binding GroceryList.Name}" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
