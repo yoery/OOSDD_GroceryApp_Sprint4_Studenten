@@ -4,6 +4,7 @@ namespace Grocery.App.ViewModels
 {
     public partial class GlobalViewModel : BaseViewModel
     {
-        public Client Client { get; set; }
+        public Role Role { get; set; } = Role.None;
+        public Client Client { get; internal set; }
     }
 }
