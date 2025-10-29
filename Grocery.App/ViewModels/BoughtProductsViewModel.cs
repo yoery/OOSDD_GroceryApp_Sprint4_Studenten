@@ -4,6 +4,7 @@ using Grocery.Core.Interfaces.Services;
 using Grocery.Core.Models;
 using System.Collections.ObjectModel;
 
+
 namespace Grocery.App.ViewModels
 {
     public partial class BoughtProductsViewModel : BaseViewModel
@@ -23,15 +24,7 @@ namespace Grocery.App.ViewModels
 
         partial void OnSelectedProductChanged(Product? oldValue, Product newValue)
         {
-            BoughtProductsList.Clear();
-            if (newValue != null)
-            {
-                var boughtProducts = _boughtProductsService.Get(newValue.Id);
-                foreach (var item in boughtProducts)
-                {
-                    BoughtProductsList.Add(item);
-                }
-            }
+            //Zorg dat de lijst BoughtProductsList met de gegevens die passen bij het geselecteerde product. 
         }
 
         [RelayCommand]

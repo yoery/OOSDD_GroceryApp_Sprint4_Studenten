@@ -35,12 +35,6 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <!-- Toon hier de naam van de Client naam van de boodschappenlijst -->
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding Client.Name}" FontAttributes="Bold" />
-                                <Label Text="{Binding GroceryList.Name}" />
-                                <Label Text="{Binding Product}" />
-                                <!-- eventueel meer productinformatie -->
-                            </StackLayout>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

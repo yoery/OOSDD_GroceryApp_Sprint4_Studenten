@@ -12,13 +12,11 @@ namespace Grocery.Core.Services
     public class ClientService : IClientService
     {
         private readonly IClientRepository _clientRepository;
-        private Client? _currentClient;
-
         public ClientService(IClientRepository clientRepository)
         {
             _clientRepository = clientRepository;
         }
-
+        
         public Client? Get(string email)
         {
             return _clientRepository.Get(email);
@@ -33,16 +31,6 @@ namespace Grocery.Core.Services
         {
             List<Client> clients = _clientRepository.GetAll();
             return clients;
-        }
-
-        public Client? GetCurrentClient()
-        {
-            return _currentClient;
-        }
-
-        public void SetCurrentClient(Client? client)
-        {
-            _currentClient = client;
         }
     }
 }
